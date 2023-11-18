@@ -17,7 +17,7 @@ from keras.models import Sequential, load_model, Model
 
 
 def change_to_bw(bytes_data, calibration_value):
-  im_gray = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_GRAYSCALE) 
+  # im_gray = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_GRAYSCALE) 
   (thresh, im_bw) = cv2.threshold(im_gray, 127, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
   thresh += calibration_value
   im_bw = cv2.threshold(im_gray, thresh, 255, cv2.THRESH_BINARY)[1]
