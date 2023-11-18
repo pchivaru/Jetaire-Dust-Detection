@@ -1,6 +1,5 @@
 numpy
 pandas
-opencv-python-headless
 opencv-python
 keras 
 streamlit
