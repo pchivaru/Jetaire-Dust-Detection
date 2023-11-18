@@ -8,7 +8,7 @@ import cv2
 
 #from keras.preprocessing.image import ImageDataGenerator
 #from keras.utils import load_img, img_to_array
-#from keras.models import Sequential, load_model, Model
+from keras.models import Sequential, load_model, Model
 #from keras.layers import Conv2D, MaxPooling2D
 #from keras.layers import Activation, Dropout, Flatten, Dense, GlobalAveragePooling2D
 #from keras import backend as K
