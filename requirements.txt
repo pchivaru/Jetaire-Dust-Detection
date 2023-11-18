@@ -1,3 +1,5 @@
 numpy
 pandas
 streamlit
+cv2
+keras 

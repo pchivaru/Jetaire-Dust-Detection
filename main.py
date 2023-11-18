@@ -11,13 +11,6 @@ from keras.layers import Activation, Dropout, Flatten, Dense, GlobalAveragePooli
 from keras import backend as K
 from keras.callbacks import ModelCheckpoint
 from keras import regularizers
-from glob import glob
-
-import matplotlib.pyplot as plt
-
-
-from IPython.display import SVG, display, clear_output
-from keras.utils.vis_utils import model_to_dot
 
 
 def change_to_bw(bytes_data, calibration_value):
