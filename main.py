@@ -4,6 +4,8 @@ import numpy as np
 #import importlib  
 #cv2 = importlib.import_module("opencv-python-headless")
 #import `opencv-python-headless' as cv2
+from PIL import Image
+import io
 import cv2
 
 from keras.preprocessing.image import ImageDataGenerator
@@ -19,6 +21,8 @@ from keras.applications.resnet import ResNet50, preprocess_input
 
 
 def change_to_bw(bytes_data, calibration_value):
+  #im_gray = Image.frombytes('L', (3000,3000), bytes_data, 'raw')
+
   im_gray = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_GRAYSCALE) 
   (thresh, im_bw) = cv2.threshold(im_gray, 127, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
   thresh += calibration_value
