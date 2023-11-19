@@ -4,9 +4,9 @@ import numpy as np
 #import importlib  
 #cv2 = importlib.import_module("opencv-python-headless")
 #import `opencv-python-headless' as cv2
-from PIL import Image
-import io
-import cv2
+""" from PIL import Image
+import io """
+
 
 from keras.preprocessing.image import ImageDataGenerator
 #from keras.utils import load_img, img_to_array
@@ -18,6 +18,8 @@ from keras.models import Sequential, load_model, Model
 #from keras import regularizers
 
 from keras.applications.resnet import ResNet50, preprocess_input
+import cv2
+
 
 
 def change_to_bw(bytes_data, calibration_value):
